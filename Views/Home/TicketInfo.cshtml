@@ -1,0 +1,84 @@
+@model TicketModel;
+
+@{
+    ViewData["Title"] = "Ticket #0123";
+}
+
+<main class="ticket-info">
+        <p class="breadcrumbs">Projetos / Projeto Um / Ticket #001</p>
+        <div class="project-header">
+            <h1>Ticket #001</h1>
+        </div>
+
+        <section class="ticket-info-panel">
+            <div class="flex">
+                <div class="ticket-info-grid">
+                    <div class="ticket-info-segment">
+                        <h3>ID</h3>
+                        <p>@Model.ID</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Status</h3>
+                        <p>Aberto</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Severity</h3>
+                        <p>Crítico</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Tipo</h3>
+                        <p>Tech</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Projeto</h3>
+                        <p>Projeto Um</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Criador</h3>
+                        <p>Dwight Schrute</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Última atualização</h3>
+                        <p>01/02/2022</p>
+                    </div>
+                    <div class="ticket-info-segment">
+                        <h3>Data de criação</h3>
+                        <p>01/12/2021</p>
+                    </div>
+                </div>
+                <div class="ticket-description">
+                    <h3>Descrição</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, rem. Eius quod quam ut culpa,
+                        quo fugiat earum magnam ad laboriosam delectus facilis numquam placeat quasi laudantium
+                        voluptatibus explicabo repellat. </p>
+                </div>
+            </div>
+            <button class="update-ticket"><a asp-route-id="@Model.ID" asp-controller="Ticket" asp-action="UpdateTicketModal">Atualizar Ticket</a></button>
+            <button>Fechar Ticket</button>
+            <button><a asp-route-id="@Model.ID" asp-controller="Ticket" asp-action="ApagarTicket">Apagar Ticket</a></button>
+        </section>
+
+        <section class="panels-grid">
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Comentários</h2>
+                    <button id="novo-ticket">Novo Comentário</button>
+                </div>
+                <div class="panel-content tickets-panel-list">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Histórico</h2>
+                </div>
+                <div class="panel-content members-panel-list">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

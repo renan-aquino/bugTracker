@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+
+table {
+    text-align: left;
+    width: 100%;
+}
+
+thead {
+    font-weight: $fw-semibold;
+}
+
+.date {
+    text-align: end;
+}
+
+
+.tickets-table {
+    .id {
+        width: 70px;
+    }
+
+    .status {
+        width: 90px;
+    }
+
+    .severity {
+        color: red;
+        width: 90px;
+    }
+
+    .type {
+        width: 90px;
+    }
+
+    .description {
+        width: 210px;
+    }
+
+}
+
+.members-table {
+    th, td {
+        width: 50%;
+    }
+}
+
+.tr-link {
+    cursor: pointer;
+}

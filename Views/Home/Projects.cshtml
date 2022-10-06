@@ -1,0 +1,43 @@
+﻿@model List<ProjectModel>
+
+@{
+    ViewData["Title"] = "Projetos";
+}
+
+<main class="projects">
+
+    <h1>Projetos</h1>
+
+    <section class="menu">
+        <form action="">
+            <input type="text" class="search-input" name="search-project" id="search-project"
+                placeholder="Pesquisar...">
+        </form>
+        <button class="create-project" onclick="location.href='@Url.Action("CreateProject", "Home")'"
+            id="create-project">Criar</button>
+    </section>
+
+    <section class="projects-grid">
+
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var projeto in Model)
+            {
+                <div class="project-box" onclick="location.href='@Url.Action("ProjectX", "Home", new {id = projeto.ID})'">
+                    <div class="project-title">
+                        <h2>@projeto.Nome</h2>
+                        <div class="project-notification">
+                            <p>2</p>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <p>XX Tickets ativos</p>
+                        <p>|</p>
+                        <p>XX Integrantes</p>
+                    </div>
+                </div>
+            }
+        }
+
+    </section>
+</main>
