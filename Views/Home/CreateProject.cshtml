@@ -1,0 +1,87 @@
+@model ProjectModel; 
+
+@{
+    ViewData["Title"] = "Novo Projeto";
+}
+
+
+<main class="pop-up">
+    <section class="pop-up-box">
+        <form asp-controller="Home" asp-action="CreateProject" method="post">
+            <input class="project-name-input" asp-for="Nome" placeholder="Nome do projeto">
+            <h2>Integrantes</h2>
+            <div action="" class="member-form">
+                <input type="text" class="search-input" name="nome-integrante" id="nome-integrante"
+                    placeholder="Nome do integrante">
+                <button class="add-member-button">Adicionar</button>
+            </div>
+            <table class="members-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Renan Aquino</td>
+                        <td>Desenvolvedor</td>
+                        <td><img src="./images/icon-trash-bin.svg" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pop-up-buttons">
+                <button class="cancel-button" id="cancel-button">Cancelar</button>
+                <button class="confirm-button" type="submit" id="confirm-button">Salvar</button>
+            </div>
+        </form>
+
+    </section>
+</main>

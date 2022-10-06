@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - bugTracker</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/bugTracker.styles.css" asp-append-version="true" />
+    <script defer src="~/js/site.js" asp-append-version="true"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo" onclick="location.href='@Url.Action("Projects", "Home")'" ><span>Bug</span> Tracker</h1>
+        <div class="profile">
+            <h2>Nome Pessoa</h2>
+            <p>Ocupação</p>
+        </div>
+        <nav role="list">
+            <li class="list-item" onclick="location.href='@Url.Action("Projects", "Home")'">
+                <img src="../../images/icon-project.svg" alt="">
+                <h2>Projetos</h2>
+            </li>
+            <li class="list-item">
+                <img src="../../images/icon-my-tickets.svg" alt="">
+                <h2>Meus Tickets</h2>
+            </li>
+            <li class="list-item">
+                <img src="../../images/icon-manage.svg" alt="">
+                <h2>Gerenciar Equipe</h2>
+            </li>
+        </nav>
+    </header>
+
+ 
+     @RenderBody()
+   
+
+</body>
+
+</html>

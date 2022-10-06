@@ -1,0 +1,16 @@
+.search-input{
+    border: none;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    &::placeholder {
+        font-size: var(--fs-300);
+        color: rgb(136, 136, 136);
+    }
+}
+
+.project-name-input {
+    border: none;
+    &::placeholder {
+        font-size: var(--fs-500);
+        color: rgb(136, 136, 136);
+    }
+}

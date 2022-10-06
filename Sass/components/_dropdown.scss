@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+
+.dropdown {
+    position: relative;
+}
+
+.select {
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 2px rgb(202, 202, 202) solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgb(184, 184, 184);
+    }
+}
+
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.dd-menu {
+    padding: 0;
+    background-color: rgb(212, 212, 212);
+    border: 2px rgb(202, 202, 202) solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    position: absolute;
+    top: 4.2em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+
+    li {
+        padding: 0.7em 0.5em;
+        margin: 0.3em 0.3em;
+        border-radius: 0.5em;
+        cursor: pointer;
+
+        &:hover {
+           background-color: rgb(184, 184, 184); 
+        }
+    }
+}
+
+.active {
+    background-color: rgb(184, 184, 184);
+}
+
+.dd-menu-open {
+    display: block;
+    opacity: 1;
+}

@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+
+.tickets {
+    padding: 54px 1rem 0 1rem;
+}
+
+.project-header {
+    display: flex;
+    gap: 60px;
+}
+
+.project-info {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.panels-grid {
+    padding-top: 57px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 19px;
+}
+
+
+.tickets-panel-list {
+   height: 300px;
+   
+   form{
+    text-align: end;
+    padding-bottom: 12px;
+   }
+
+}
+
+.members-panel-list {
+    height: 300px;
+
+    form{
+        text-align: end;
+        padding-bottom: 12px;
+    }
+       
+}

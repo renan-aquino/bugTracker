@@ -1,0 +1,56 @@
+@model TicketViewModel
+
+@{
+    ViewData["Title"] = "Ticket Modal";
+}
+
+<main class="pop-up">
+    <section class="ticket-modal-box">
+        <h2>Novo Ticket</h2>
+
+        <form asp-controller="Home" asp-action="CreateNewTicket" method="post">
+            <input asp-for="ProjetoID" type="hidden">
+            <input asp-for="TicketID" type="hidden">
+            <div class="modal-description">
+                <label for="descricao">Descrição</label>
+                <textarea class="modal-description-box" asp-for="Descricao" name="descricao" id="descricao" rows="8"
+                    placeholder="Descreva o problema..."></textarea>
+            </div>
+            <div class="ticket-modal-dropdown-group">
+                <div class="severity-dropdown">
+                    <label for="grau">Grau</label>
+                    <div class="dropdown" nome="grau">
+                        <div class="select">
+                            <span class="selected">Moderado</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="dd-menu" role="list">
+                            <li class="active">Moderado</li>
+                            <li>Sério</li>
+                            <li>Grave</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="type-dropdown">
+                    <label for="tipo">Tipo</label>
+                    <div class="dropdown" nome="tipo">
+                        <div class="select">
+                            <span class="selected">Tech</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="dd-menu" role="list">
+                            <li class="active">Moderado</li>
+                            <li>Sério</li>
+                            <li>Grave</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ticket-modal-buttons">
+                <button class="cancel-button" id="cancel-button">Cancelar</button>
+                <button class="confirm-button" id="confirm-button" type="submit">Salvar</button>
+            </div>
+        </form>
+
+    </section>
+</main>

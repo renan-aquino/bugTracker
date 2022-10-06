@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+
+// .pop-up {
+//     height: 90vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.pop-up-box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    top: 15vh;
+    left: calc(50vw - 400px);
+    background-color: $clr-neutral-100;
+    box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
+    border-radius: 10px;
+    padding: 40px 24px 30px 24px;
+    .project-name-input {
+        padding-bottom: 24px;
+    }
+
+    .add-member-button {
+        margin-left: 24px;
+    }
+}
+
+.member-form {
+    padding-block: 16px;
+}
+
+
+.table-wrapper {
+    height: 150px;
+    overflow: auto;
+}
+
+.pop-up-buttons {
+    position: absolute;
+    bottom: 46px;
+    right: 24px
+}

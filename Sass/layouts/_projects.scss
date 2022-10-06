@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+
+.projects {
+    padding: 5rem 1rem 0 1rem;
+}
+
+.menu {
+    padding-top: 36px;
+    display: flex;
+    align-items: end;
+    
+}
+
+.create-project {
+    margin-left: 2rem;
+}
+
+.projects-grid {
+    padding-top: 41px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 292px);
+    gap: 22px;
+}
+
+.project-box {
+    border: 1px solid hsla(0, 0%, 43%, 1);
+    min-height: 83px;
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.project-preview {
+    padding-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-notification {
+    display: flex;
+    width: 23px;
+    height: 21px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    p {
+        color: white;
+    }
+
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: $clr-neutral;
+    font-size: var(--fs-300);
+    font-weight: $fw-regular;
+}
+
+h1 {
+    font-size: var(--fs-500);
+}
+
+.breadcrumbs {
+    font-size: var(--fs-200);
+    padding-bottom: 6px;
+}

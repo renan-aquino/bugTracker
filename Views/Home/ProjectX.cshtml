@@ -1,0 +1,90 @@
+@model ProjectModel;
+
+@{
+    ViewData["Title"] = "Projeto Um";
+}
+
+ <main class="tickets">
+        <p class="breadcrumbs">Projetos / @Model.Nome</p>
+        <div class="project-header">
+            <h1>@Model.Nome</h1>
+            <div class="project-info">
+                <p>XX Tickets ativos</p>
+                <p>XX Integrantes</p>
+            </div>
+            <button id="manage-project">Gerenciar</button>
+        </div>
+
+        <section class="panels-grid">
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Tickets</h2>
+                    <button id="novo-ticket" onclick="location.href='@Url.Action("CreateTicket", "Home", new { ProjetoID = Model.ID, TicketID = 0 })'">Novo Ticket</button>
+                </div>
+                <div class="panel-content tickets-panel-list">
+                    <div class="container">
+                        <form action="">
+                            <input type="text" class="search-input" name="search-ticket" id="search-ticket"
+                                placeholder="Pesquisar...">
+                        </form>
+                        <table class="tickets-table">
+                            <thead>
+                                <tr>
+                                    <th class="id">ID</th>
+                                    <th class="status">Status</th>
+                                    <th class="severity">Grau</th>
+                                    <th class="type">Tipo</th>
+                                    <th class="description">Descrição</th>
+                                    <th class="date">Última atualização</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    foreach (var ticket in Model.Tickets)
+                                    {
+                                        <tr class="tr-link"; 
+                                        onclick="location.href='@Url.Action("TicketInfo", "Home", new {id = ticket.ID})'">
+                                            <td class="id">@ticket.ID</td>
+                                            <td class="status">Aberto</td>
+                                            <td class="severity degree">Crítico</td>
+                                            <td class="type">Tech</td>
+                                            <td class="description">@ticket.Descricao</td>
+                                            <td class="date">01/02/2022</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Integrantes</h2>
+                </div>
+                <div class="panel-content members-panel-list">
+                    <div class="container">
+                        <form action="">
+                            <input type="text" class="search-input" name="search-member" id="search-member"
+                                placeholder="Pesquisar...">
+                        </form>
+                        <table class="members-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Cargo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Renan Aquino</td>
+                                    <td>Desenvolvedor</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
