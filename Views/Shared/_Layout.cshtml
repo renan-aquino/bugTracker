@@ -26,10 +26,17 @@
                 <img src="../../images/icon-my-tickets.svg" alt="">
                 <h2>Meus Tickets</h2>
             </li>
-            <li class="list-item">
-                <img src="../../images/icon-manage.svg" alt="">
-                <h2>Gerenciar Equipe</h2>
-            </li>
+            
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="list-item">
+                    <img src="../../images/icon-manage.svg" alt="">
+                    <h2>Gerenciar Equipe</h2>
+                   </li>
+                }
+            }
         </nav>
     </header>
 

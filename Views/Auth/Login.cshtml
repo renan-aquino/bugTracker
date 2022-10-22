@@ -1,0 +1,33 @@
+@model LoginViewModel;
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+    <main class="login">
+        <div class="login-box">
+
+            <div class="login-content">
+                <div class="login-header">
+                    <h1 class="login-logo"><span>Bug</span>Tracker</h1>
+                </div>
+                
+                <div class="login-body">
+                    <form asp-controller="Auth" asp-action="Login" method="post" class="login-form">
+                        <input asp-for="UserName" type="text" placeholder="UserName">
+                        <input asp-for="Password" type="text" placeholder="Senha">
+                        <button type="submit" class="login-button">Entrar</button>
+                    </form>
+                    <div class="login-options">
+                        <p>Primeiro Acesso? <a asp-controller="Auth" asp-action="Register">Criar conta</a></p>
+                        <p>Entrar com uma conta <a href="">Demo</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="login-box-image">
+            </div>
+        </div>
+    </main>

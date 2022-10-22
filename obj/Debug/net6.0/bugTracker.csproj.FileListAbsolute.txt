@@ -39,8 +39,6 @@ D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Compone
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
-D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -124,14 +122,11 @@ D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Diagnos
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Features.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Http.dll
-D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
-D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -395,3 +390,10 @@ D:\renan\Documents\bugTracker\bin\Debug\net6.0\publish\bugTracker.deps.json
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\publish\bugTracker.runtimeconfig.json
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\publish\package-lock.json
 D:\renan\Documents\bugTracker\bin\Debug\net6.0\publish\package.json
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\renan\Documents\bugTracker\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
