@@ -63,14 +63,8 @@ public class HomeController : Controller
     }
 
     public IActionResult CreateTicket(TicketViewModel vm)
-    {
-        // if(id == null)
-            return View(vm);
-        // else
-        // {
-        //     var ticket = _repository.GetProject((int) id);
-        //     return View(ticket);
-        // }
+    {    
+        return View(vm);
     }
 
     [HttpPost]
