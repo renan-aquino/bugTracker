@@ -8,57 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = bugTracker
 build_property.RootNamespace = bugTracker
-build_property.ProjectDir = D:\renan\Documents\bugTracker\
+build_property.ProjectDir = d:\renan\Documents\bugTracker\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\renan\Documents\bugTracker
+build_property.MSBuildProjectDirectory = d:\renan\Documents\bugTracker
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/renan/Documents/bugTracker/Views/Auth/Login.cshtml]
+[d:/renan/Documents/bugTracker/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Auth/Register.cshtml]
+[d:/renan/Documents/bugTracker/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Auth/_ViewStart.cshtml]
+[d:/renan/Documents/bugTracker/Views/Auth/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/CreateProject.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/CreateProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVQcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/CreateTicket.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/CreateTicket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVUaWNrZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/Projects.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/Projects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/ProjectX.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/ProjectX.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0WC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/TicketInfo.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/TicketInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaWNrZXRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Home/_ViewStart.cshtml]
+[d:/renan/Documents/bugTracker/Views/Home/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Shared/_Layout.cshtml]
+[d:/renan/Documents/bugTracker/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/Shared/_Layout2.cshtml]
+[d:/renan/Documents/bugTracker/Views/Shared/_Layout2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/renan/Documents/bugTracker/Views/_ViewImports.cshtml]
+[d:/renan/Documents/bugTracker/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
