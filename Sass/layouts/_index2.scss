@@ -4,10 +4,11 @@
 @forward '../layouts/ticket-info';
 @forward '../layouts/create-project';
 @forward '../layouts/create-ticket';
+@forward '../layouts/login';
+@forward '../layouts/signup';
  
 
 main {
-    // width: calc(100vw - 240px);
     margin-left: 240px;
 }
 

@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+
+
+.login {
+    margin: 0px;
+    // height: 100%;
+    width: 100%;
+    padding-top: 7%;
+    padding-bottom: 8%;
+    background: linear-gradient(180deg, #F3F3F3 0%, #CCCCCC 100%);
+}
+
+.sign-up-box {
+    background: $clr-neutral-100;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 660px;
+    width: 973px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.login-content {
+    height: 100%;
+    padding-inline: 60px;
+    padding-bottom: 60px;
+}
+
+.login-header {
+    padding-top: 105px;
+    padding-bottom: 57px;
+
+}
+
+.login-logo {
+    font-size: 2rem;
+
+    span {
+        color: $clr-accent;
+    }
+}
+
+.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 210px);
+}
+
+.sign-up-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    input {
+        width: 296px;
+        padding: 5px;
+        border: 1px solid hsla(0, 0%, 66%, 1);
+    }
+
+    select {
+        padding: 7px;
+        border: 1px solid hsla(0, 0%, 66%, 1);
+    }
+
+    button {
+        width: 8em;
+        grid-column: 1;
+
+    }
+}
+
+.login-options {
+    display: grid;
+    gap: 15px;
+}
+
+.login-box-image {
+    width: 100%;
+    background-image: url('../../images/landscape.jpg');
+    background-color: #7D5CFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-position: bottom center;
+
+}
+
+@media (max-width: 1367px) {
+    .login{
+        padding-top: 4%;
+    }
+}

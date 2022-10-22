@@ -1,19 +1,14 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using bugTracker.Models;
 
 namespace bugTracker.Data;
 
-public class BancoContext : DbContext
+public class BancoContext : IdentityDbContext
 {
     public BancoContext(DbContextOptions<BancoContext> options) : base(options)
     {
     }
-
-    // protected override void OnModelCreating(ModelBuilder modelBuilder)
-    // {
-    //     modelBuilder.Entity<ProjectModel>().HasMany(p => p.Admins).WithMany(m => m.ProjetosAdmin);
-    //     modelBuilder.Entity<ProjectModel>().HasMany(p => p.Membros).WithMany(m => m.ProjetosMembro);
-    // }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,6 +16,8 @@ public class BancoContext : DbContext
         {
             relationship.DeleteBehavior = DeleteBehavior.Restrict;
         }
+
+        base.OnModelCreating(modelBuilder);
 
     }
    

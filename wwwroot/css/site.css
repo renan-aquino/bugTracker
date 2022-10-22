@@ -319,6 +319,117 @@ nav {
   gap: 50px;
 }
 
+.login-box {
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 660px;
+  width: 973px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.login-form input {
+  width: 296px;
+  padding: 5px;
+  border: 1px solid hsl(0deg, 0%, 66%);
+}
+.login-form select {
+  padding: 7px;
+  border: 1px solid hsl(0deg, 0%, 66%);
+}
+.login-form button {
+  width: 8em;
+  grid-column: 1;
+}
+
+.login {
+  margin: 0px;
+  width: 100%;
+  padding-top: 7%;
+  padding-bottom: 8%;
+  background: linear-gradient(180deg, #F3F3F3 0%, #CCCCCC 100%);
+}
+
+.sign-up-box {
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 660px;
+  width: 973px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.login-content {
+  height: 100%;
+  padding-inline: 60px;
+  padding-bottom: 60px;
+}
+
+.login-header {
+  padding-top: 105px;
+  padding-bottom: 57px;
+}
+
+.login-logo {
+  font-size: 2rem;
+}
+.login-logo span {
+  color: hsl(252deg, 98%, 74%);
+}
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 210px);
+}
+
+.sign-up-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.sign-up-form input {
+  width: 296px;
+  padding: 5px;
+  border: 1px solid hsl(0deg, 0%, 66%);
+}
+.sign-up-form select {
+  padding: 7px;
+  border: 1px solid hsl(0deg, 0%, 66%);
+}
+.sign-up-form button {
+  width: 8em;
+  grid-column: 1;
+}
+
+.login-options {
+  display: grid;
+  gap: 15px;
+}
+
+.login-box-image {
+  width: 100%;
+  background-image: url("../../images/landscape.jpg");
+  background-color: #7D5CFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-position: bottom center;
+}
+
+@media (max-width: 1367px) {
+  .login {
+    padding-top: 4%;
+  }
+}
 main {
   margin-left: 240px;
 }
