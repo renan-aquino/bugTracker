@@ -1,1 +1,4 @@
 node_modules
+publish
+.vs
+.vscode
