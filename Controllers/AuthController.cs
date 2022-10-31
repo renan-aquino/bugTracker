@@ -9,11 +9,11 @@ namespace bugTracker.Controllers;
 
 public class AuthController : Controller
 {
-    private SignInManager<IdentityUser> _signInManager;
-    private UserManager<IdentityUser> _userManager;
+    private SignInManager<ApplicationUser> _signInManager;
+    private UserManager<ApplicationUser> _userManager;
     public AuthController(
-        SignInManager<IdentityUser> signInManager,
-        UserManager<IdentityUser> userManager)
+        SignInManager<ApplicationUser> signInManager,
+        UserManager<ApplicationUser> userManager)
     {
         _signInManager = signInManager;
         _userManager = userManager;
@@ -27,19 +27,12 @@ public class AuthController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginViewModel vm)
     {
-        var result = await _signInManager.PasswordSignInAsync(vm.UserName, vm.Password, false, false);
+        var result = await _signInManager.PasswordSignInAsync(vm.Email, vm.Password, false, false);
         if(!result.Succeeded)
         {
             return View(vm);
         }
-
-        // var user = await _userManager.FindByNameAsync(vm.UserName);
-        // var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
-
-        // if (isAdmin)
-        // {
-
-        // }
+    
         return RedirectToAction("Projects", "Home");
 
     }
@@ -58,13 +51,14 @@ public class AuthController : Controller
             return View(vm);
         }
 
-        var user = new IdentityUser
+        var user = new ApplicationUser
         {
             UserName = vm.Email,
-            Email = vm.Email
+            Email = vm.Email,
+            Nome = vm.Nome + ' ' + vm.Sobrenome
         };
 
-        var result = await _userManager.CreateAsync(user, "password");
+        var result = await _userManager.CreateAsync(user, vm.Senha);
 
         if(result.Succeeded)
         {

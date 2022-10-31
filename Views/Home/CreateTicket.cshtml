@@ -18,32 +18,21 @@
             </div>
             <div class="ticket-modal-dropdown-group">
                 <div class="severity-dropdown">
-                    <label for="grau">Grau</label>
-                    <div class="dropdown" nome="grau">
-                        <div class="select">
-                            <span class="selected">Moderado</span>
-                            <div class="caret"></div>
-                        </div>
-                        <ul class="dd-menu" role="list">
-                            <li class="active">Moderado</li>
-                            <li>Sério</li>
-                            <li>Grave</li>
-                        </ul>
-                    </div>
+                    <label for="Grau">Grau</label>
+
+                    <select asp-for="Grau" name="Grau" id="Grau">
+                        <option value="Moderado">Moderado</option>
+                        <option value="Serio">Sério</option>
+                        <option value="Grave">Grave</option>
+                    </select>
                 </div>
                 <div class="type-dropdown">
-                    <label for="tipo">Tipo</label>
-                    <div class="dropdown" nome="tipo">
-                        <div class="select">
-                            <span class="selected">Tech</span>
-                            <div class="caret"></div>
-                        </div>
-                        <ul class="dd-menu" role="list">
-                            <li class="active">Moderado</li>
-                            <li>Sério</li>
-                            <li>Grave</li>
-                        </ul>
-                    </div>
+                    <label for="Tipo">Tipo</label>
+
+                    <select asp-for="Tipo" name="Tipo" id="Tipo">
+                        <option value="Funcional">Funcional</option>
+                        <option value="Visual">Visual</option>
+                    </select>
                 </div>
             </div>
             <div class="ticket-modal-buttons">

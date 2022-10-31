@@ -14,13 +14,17 @@
                 
                 <div class="login-body">
                     <form asp-controller="Auth" asp-action="Register" method="post" class="sign-up-form">
-                        <input type="text" placeholder="Nome">
-                        <input type="text" placeholder="Sobrenome">
+
+                        <input asp-for="Nome" type="text" placeholder="Nome">
+                        <input sap-for="Sobrenome" type="text" placeholder="Sobrenome">
                         <div>
                             <input asp-for="Email" placeholder="Email">
                             <span asp-validation-for="Email"></span>
                         </div>
-                        <input type="text" placeholder="Confirmar email">
+                        <div>
+                            <input asp-for="ConfirmarEmail" type="text" placeholder="Confirmar email">
+                             <span asp-validation-for="Email"></span>
+                        </div>
                         <div>
                             <input asp-for="Senha" type="password" placeholder="Senha">
                             <span asp-validation-for="Senha"></span>
@@ -30,10 +34,11 @@
                             <span asp-validation-for="ConfirmarSenha"></span>
                         </div>
 
-                        <select name="" id="">
-                            <option value="volvo">Desenvolvedor</option>
-                            <option value="saab">Designer</option>
+                        <select asp-for="Cargo" name="Cargo" id="Cargo">
+                            <option value="Desenvolvedor">Desenvolvedor</option>
+                            <option value="Designer">Designer</option>
                         </select>
+                        
                         <button type="submit" class="login-button" value="Sign Up">Entrar</button>
                     </form>
                     <div class="login-options">

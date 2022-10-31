@@ -11,6 +11,7 @@ public interface IProjectRepository
     void RemoveProject(int id);
 
     public TicketModel GetTicket(int id);
+    void UpdateTicket(TicketModel ticket);
 
     Task<bool> SaveChangesAsync();
 }
