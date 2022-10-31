@@ -54,4 +54,10 @@ public class ProjectRepository : IProjectRepository
        return _context.Tickets.FirstOrDefault(t => t.ID == id);
     }
 
+
+    public void UpdateTicket(TicketModel ticket)
+    {  
+        _context.Tickets.Update(ticket);
+    }
+
 }

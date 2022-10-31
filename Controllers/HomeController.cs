@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using bugTracker.Models;
 using bugTracker.Repositories;
 using bugTracker.ViewModels;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace bugTracker.Controllers;
 
@@ -10,14 +12,19 @@ public class HomeController : Controller
 {
     private readonly IProjectRepository _repository;
 
+
     public HomeController(IProjectRepository repository)
     {
         _repository = repository;
-
     }
 
-    public IActionResult Projects()
+    public async Task<IActionResult> Projects()
     {
+        // ClaimsPrincipal currentUser = this.User;
+        // var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+        
+        
         var projetos = _repository.GetAllProjects();
         return View(projetos);
     }
@@ -78,7 +85,15 @@ public class HomeController : Controller
         if(vm.TicketID == 0)
         {
             projeto.Tickets = projeto.Tickets ?? new List<TicketModel>();
-            projeto.Tickets.Add(new TicketModel { Descricao = vm.Descricao });
+            projeto.Tickets.Add(new TicketModel
+            { 
+                Status = "Aberto",
+                Descricao = vm.Descricao,
+                Grau = vm.Grau,
+                Tipo = vm.Tipo,
+                DataCriacao = DateTime.Now
+                
+            });
     
             _repository.UpdateProject(projeto);
 
@@ -94,4 +109,37 @@ public class HomeController : Controller
         TicketModel ticket = _repository.GetTicket(id);
         return View(ticket);
     }
+
+    public IActionResult Comment(CommentViewModel vm)
+    {
+        return View(vm);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AddNewComment(CommentViewModel vm)
+    {
+        if(!ModelState.IsValid)
+            return RedirectToAction("TicektInfo", new { id = vm.TicketID });
+
+        var ticket = _repository.GetTicket(vm.TicketID);
+
+        if(vm.CommentID == 0)
+        {
+            ticket.Comentarios = ticket.Comentarios ?? new List<CommentModel>();
+            ticket.Comentarios.Add(new CommentModel { Texto = vm.Texto });
+    
+            _repository.UpdateTicket(ticket);
+
+        }
+
+        await _repository.SaveChangesAsync();
+
+        return RedirectToAction("TicketInfo", new { id = vm.TicketID });
+    }
+
+    // public IActionResult History(HistoryModel vm)
+    // {    
+    //     return View(vm);
+    // }
+
 }

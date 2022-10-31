@@ -46,11 +46,11 @@
                                         <tr class="tr-link"; 
                                         onclick="location.href='@Url.Action("TicketInfo", "Home", new {id = ticket.ID})'">
                                             <td class="id">@ticket.ID</td>
-                                            <td class="status">Aberto</td>
-                                            <td class="severity degree">Crítico</td>
-                                            <td class="type">Tech</td>
+                                            <td class="status">@ticket.Status</td>
+                                            <td class="severity degree">@ticket.Grau</td>
+                                            <td class="type">@ticket.Tipo</td>
                                             <td class="description">@ticket.Descricao</td>
-                                            <td class="date">01/02/2022</td>
+                                            <td class="date">@ticket.DataCriacao.ToString("d")</td>
                                         </tr>
                                     }
                                 }

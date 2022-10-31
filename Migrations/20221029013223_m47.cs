@@ -4,7 +4,7 @@
 
 namespace bugTracker.Migrations
 {
-    public partial class m40 : Migration
+    public partial class m47 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

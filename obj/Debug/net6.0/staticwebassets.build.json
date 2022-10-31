@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ci+/zwlAOz6IxlDJZQQT1DMeaCRs/gUmOTeIz6n8HmE=",
+  "Hash": "EyAf6MiA+z0I0gmsD/d2U2L1a0Xgv4FidIqgsypOMyg=",
   "Source": "bugTracker",
   "BasePath": "_content/bugTracker",
   "Mode": "Default",
@@ -1154,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icon-trash-bin.svg"
+    },
+    {
+      "Identity": "D:\\renan\\Documents\\bugTracker\\wwwroot\\images\\landscape.jpg",
+      "SourceId": "bugTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\renan\\Documents\\bugTracker\\wwwroot\\",
+      "BasePath": "_content/bugTracker",
+      "RelativePath": "images/landscape.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\landscape.jpg"
     },
     {
       "Identity": "D:\\renan\\Documents\\bugTracker\\wwwroot\\js\\script.js",

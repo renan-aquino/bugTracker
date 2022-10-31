@@ -12,8 +12,8 @@ using bugTracker.Data;
 namespace bugTracker.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20221011005056_m42")]
-    partial class m42
+    [Migration("20221029013223_m47")]
+    partial class m47
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,26 +32,19 @@ namespace bugTracker.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AutorID")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("Data")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Texto")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TicketID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TicketModelID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("AutorID");
-
-                    b.HasIndex("TicketModelID");
+                    b.HasIndex("TicketID");
 
                     b.ToTable("Comentarios");
                 });
@@ -64,9 +57,6 @@ namespace bugTracker.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AutorID")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("Data")
                         .HasColumnType("datetime2");
 
@@ -76,14 +66,7 @@ namespace bugTracker.Migrations
                     b.Property<int>("TicketID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TicketModelID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
-
-                    b.HasIndex("AutorID");
-
-                    b.HasIndex("TicketModelID");
 
                     b.ToTable("Historico");
                 });
@@ -112,62 +95,36 @@ namespace bugTracker.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int?>("CriadorID")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("DataCriacao")
+                    b.Property<DateTime>("DataCriacao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Grau")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProjetoID")
                         .HasColumnType("int");
 
                     b.Property<string>("Status")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tipo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("CriadorID");
 
                     b.HasIndex("ProjetoID");
 
                     b.ToTable("Tickets");
-                });
-
-            modelBuilder.Entity("bugTracker.Models.UserModel", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
-
-                    b.Property<string>("Cargo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Senha")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -374,50 +331,22 @@ namespace bugTracker.Migrations
 
             modelBuilder.Entity("bugTracker.Models.CommentModel", b =>
                 {
-                    b.HasOne("bugTracker.Models.UserModel", "Autor")
+                    b.HasOne("bugTracker.Models.TicketModel", "Ticket")
                         .WithMany("Comentarios")
-                        .HasForeignKey("AutorID")
+                        .HasForeignKey("TicketID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("bugTracker.Models.TicketModel", null)
-                        .WithMany("Comentarios")
-                        .HasForeignKey("TicketModelID")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Autor");
-                });
-
-            modelBuilder.Entity("bugTracker.Models.HistoryModel", b =>
-                {
-                    b.HasOne("bugTracker.Models.UserModel", "Autor")
-                        .WithMany("Atualizacoes")
-                        .HasForeignKey("AutorID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("bugTracker.Models.TicketModel", null)
-                        .WithMany("Historico")
-                        .HasForeignKey("TicketModelID")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Autor");
+                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("bugTracker.Models.TicketModel", b =>
                 {
-                    b.HasOne("bugTracker.Models.UserModel", "Criador")
-                        .WithMany("Tickets")
-                        .HasForeignKey("CriadorID")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("bugTracker.Models.ProjectModel", "Projeto")
                         .WithMany("Tickets")
                         .HasForeignKey("ProjetoID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.Navigation("Criador");
 
                     b.Navigation("Projeto");
                 });
@@ -481,17 +410,6 @@ namespace bugTracker.Migrations
             modelBuilder.Entity("bugTracker.Models.TicketModel", b =>
                 {
                     b.Navigation("Comentarios");
-
-                    b.Navigation("Historico");
-                });
-
-            modelBuilder.Entity("bugTracker.Models.UserModel", b =>
-                {
-                    b.Navigation("Atualizacoes");
-
-                    b.Navigation("Comentarios");
-
-                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

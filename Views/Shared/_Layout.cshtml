@@ -14,8 +14,8 @@
     <header>
         <h1 class="logo" onclick="location.href='@Url.Action("Projects", "Home")'" ><span>Bug</span> Tracker</h1>
         <div class="profile">
-            <h2>Nome Pessoa</h2>
-            <p>Ocupação</p>
+            <h2>@User.Identity.Name</h2>
+            <p>Cargo</p>
         </div>
         <nav role="list">
             <li class="list-item" onclick="location.href='@Url.Action("Projects", "Home")'">

@@ -4,7 +4,7 @@ using bugTracker.Models;
 
 namespace bugTracker.Data;
 
-public class BancoContext : IdentityDbContext
+public class BancoContext : IdentityDbContext<ApplicationUser>
 {
     public BancoContext(DbContextOptions<BancoContext> options) : base(options)
     {
@@ -24,8 +24,8 @@ public class BancoContext : IdentityDbContext
 
     public DbSet<TicketModel> Tickets {get; set;}
     public DbSet<ProjectModel> Projetos {get; set;}
-    public DbSet<UserModel> Usuarios {get; set;}
     public DbSet<HistoryModel> Historico {get; set;}
     public DbSet<CommentModel> Comentarios {get; set;}
+    public DbSet<ApplicationUser> ApplicationUser {get; set;}
     
 }

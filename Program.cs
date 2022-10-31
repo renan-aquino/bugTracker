@@ -2,7 +2,7 @@ using bugTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using bugTracker.Repositories;
 using Microsoft.AspNetCore.Identity;
-
+using bugTracker.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +15,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkSqlServer()
     .AddDbContext<BancoContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
 {
     options.Password.RequireDigit = false;
     options.Password.RequireNonAlphanumeric = false;
@@ -33,7 +33,7 @@ var app = builder.Build();
 var scope = app.Services.CreateScope();
 
 var ctx = scope.ServiceProvider.GetRequiredService<BancoContext>();
-var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
 ctx.Database.EnsureCreated();
@@ -47,10 +47,12 @@ if(!ctx.Roles.Any())
 
 if(!ctx.Users.Any(u => u.UserName == "admin"))
 {
-    var adminUser = new IdentityUser 
+    var adminUser = new ApplicationUser 
     {
        UserName = "admin",
-       Email = "admin@test.com" 
+       Email = "admin@test.com",
+       Nome = "Admin",
+       Cargo = "Admin"
     };
     userMgr.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
     userMgr.AddToRoleAsync(adminUser, adminRole.Name).GetAwaiter().GetResult();
